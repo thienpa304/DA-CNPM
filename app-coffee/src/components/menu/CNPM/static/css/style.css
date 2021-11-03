@@ -1,0 +1,155 @@
+:root {
+  /* note:  level càng cao <=> màu càng đậm */
+  --white: rgb(255, 255, 255);
+  --green-level-1: rgb(243, 251, 247);
+  --green-level-2: rgb(44, 186, 118);
+  --green-level-3: rgb(10, 175, 96);
+  --yellow-level-1: rgb(255, 244, 224);
+  --yellow-level-2: rgb(255, 231, 186);
+  --yellow-level-3: rgb(247, 183, 7);
+  --text-color-level-1: rgb(216, 216, 216);
+  --text-color-level-2: rgb(188, 188, 188);
+  --text-color-level-3: rgb(48, 48, 48);
+  --font-size-level-1: 12px;
+  --font-size-level-2: 16px;
+  --font-size-level-3: 24px;
+  --font-size-level-4: 36px;
+  --font-size-level-5: 42px;
+  /* Clerk */
+  --order-pending: rgb(255, 244, 224);
+  --order-preparing: rgb(228, 252, 229);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ------------------------------------------------ Menu ------------------------------------------------ */
+/* type */
+ 
+
+ 
+
+ 
+
+ 
+.far {
+  cursor: pointer;
+}
+
+.quantity * {
+  font-size: 24px;
+  margin: 0px;
+}
+ 
+
+
+ 
+
+ 
+/* ------------------------------------------------ Cart ------------------------------------------------ */
+
+/* ------------------------------------------------ Clerk ------------------------------------------------ */
+
+#orderManagement {
+  margin: 40px auto;
+  color: var(--text-color-level-3);
+  border: 1px solid black;
+  padding: 20px 40px 0px;
+  font-size: var(--font-size-level-2);
+  font-weight: 500;
+  background-color: #fafafa;
+}
+
+#orderManagement__title {
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: var(--font-size-level-4);
+}
+
+#order-control {
+  margin: 20px 0px;
+}
+
+.numberOrderPending,
+.numberOrderPreparing {
+  font-size: var(--font-size-level-4);
+  font-weight: 600;
+}
+
+.numberOrderPending {
+  color: var(--yellow-level-3);
+}
+
+.numberOrderPreparing {
+  color: var(--green-level-3);
+}
+
+.order-item {
+  padding: 20px;
+  border: 2px solid #222222;
+  border-radius: 2px;
+}
+
+.order-item--pending {
+  background-color: var(--order-pending);
+  border-color: var(--yellow-level-3);
+}
+
+.order-item--preparing {
+  background-color: var(--order-preparing);
+  border-color: var(--green-level-3);
+}
+
+.horizontal-line {
+  width: 98%;
+  margin: 8px auto;
+  border-top: 2px solid #111111;
+}
+
+.customer-phone {
+  border: 1px solid black;
+  text-decoration: none;
+  color: var(--text-color-level-3);
+}
+
+.order-item__status {
+  font-weight: 700;
+}
+
+.hiddenOrderByControl,
+.hiddenOrderWhenFilterName,
+.hiddenOrderWhenFilterTable {
+  display: none;
+}
+
+/* Override boostrap  */
+
+.form-switch {
+  display: inline-block;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 576px) {
+  #orderManagement__title {
+    font-size: var(--font-size-level-3);
+    margin-bottom: 20px;
+  }
+  .order-item {
+    padding: 15px 10px;
+  }
+  .cart{
+    width: 100%;
+  }
+}

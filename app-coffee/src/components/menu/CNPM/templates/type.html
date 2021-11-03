@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/cart.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../static/css/type.css">
+	
+    <script src="../static/vendor/js/bootstrap.bundle.min.js"></script>
+    <script src="../static//vendor/js/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/6d59c61c57.js" crossorigin="anonymous"></script>
+    <script src="../static/js/menu.js"></script>
+    <title>TYPE</title>
+</head>
+
+<body>
+    
+    <div id="menu" class="container-fluid border">
+        <div id="menu__title">Menu</div>
+
+        <div class="list-control border border-2 container">
+            <div class="arrows arrowLeft"><i class="fas fa-chevron-left"></i></div>
+            <div class="list__category container   h-100">
+                <div class="category__item">
+                    <img src="../static/image/cake.jpg" alt="cake" class="category__item__img">
+                    <div class="category__item__name">do an nhanh </div>
+                </div>
+                <div class="category__item active-item-cate">
+                    <img src="../static/image/cake.jpg" alt="cake" class="category__item__img">
+                    <div class="category__item__name">Pizza</div>
+                </div>
+                <div class="category__item">
+                    <img src="../static/image/cake.jpg" alt="cake" class="category__item__img">
+                    <div class="category__item__name">cale</div>
+                </div>
+                <div class="category__item">
+                    <img src="../static/image/cake.jpg" alt="cake" class="category__item__img">
+                    <div class="category__item__name">2</div>
+                </div>
+                <div class="category__item">
+                    <img src="../static/image/cake.jpg" alt="cake" class="category__item__img">
+                    <div class="category__item__name">Pizza</div>
+                </div>
+
+            </div>
+            <div class="arrows arrowRight"><i class="fas fa-chevron-right"></i></div>
+
+        </div>
+
+
+        <script>
+            $(document).ready(function () {
+            
+                $(".arrowLeft").click(function () {
+                    var e = $('.list__category')
+                    var scrollLength = 100
+                    e.scrollLeft(e.scrollLeft() - scrollLength)
+                    if (e.scrollLeft() == 0) {
+                        $('.category__item').last().insertBefore($('.category__item').first())
+                        e.scrollLeft(e.scrollLeft() - scrollLength)
+                    }
+                })
+    
+    
+                $(".arrowRight").click(function () {
+                    var e = $('.list__category')
+                    var scrollLength = 100
+                    let temp =e.scrollLeft()
+                    e.animate({scrollLeft:e.scrollLeft() + scrollLength},"slow") 
+                    if (e.scrollLeft() ==temp) {
+                        $('.category__item').first().insertAfter($('.category__item').last())
+                        e.scrollLeft(e.scrollLeft() + scrollLength) 
+                    }
+                })
+            })
+        </script>
+
+</body>
+
+</html>

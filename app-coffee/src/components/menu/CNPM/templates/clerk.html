@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../static/vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../static/css/style.css">
+    <title>Quản lí đơn hàng</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">myRestaurant</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Quản lí đơn hàng</a>
+                    <a class="nav-link active" aria-current="page" href="#">Quản lí món ăn</a>
+                    <a class="nav-link active" aria-current="page" href="#">Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="orderManagement" class=" container">
+        <div id="orderManagement__title">Quản lí đơn hàng</div>
+        <hr class="horizontal-line"></hr>
+        <div id="order-control" class="row ">
+            <div class="col-12 col-sm-10 col-md-5 my-1 order-control__search-name">
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">Tên</span>
+                    <input type="text" class="form-control" id="inputCustomerName" aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <div class="col-10 col-sm-7 col-md-4 my-1 order-control__search-table">
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon2">Số bàn</span>
+                    <input type="text" class="form-control" id="inputTableNumber" aria-describedby="basic-addon2">
+                </div>
+            </div>
+            <!-- <div class="col-12 col-sm-5 col-md-3 my-1 order-control__btn">
+                <button class="btn btn-dark">Tìm kiếm</button>
+            </div> -->
+            <div class="col-12 order-control__show border p-2 ps-3 my-2">
+                <h5>Hiển thị</h5>
+                <span class="form-check form-switch m-1">
+                    <input class="form-check-input" type="checkbox" id="switch-pending" checked>
+                    <label class="form-check-label" for="switch-pending" id="pendingSwitchLabel">Đang chờ</label>
+                </span>
+                <span class="form-check form-switch  m-1">
+                    <input class="form-check-input" type="checkbox" id="switch-preparing" checked>
+                    <label class="form-check-label" for="switch-preparing" id="preparingSwitchLabel">Đang chuẩn bị</label>
+                </span>
+            </div>
+        </div>
+        <div id="order-list">
+
+        </div>
+    </div>
+    <script src="./../static/vendor/js/jquery-3.6.0.min.js "></script>
+    <script src="./../static/vendor/js/popper.min.js "></script>
+    <!-- <script src="./../static/vendor/js/bootstrap.bundle.min.js "></script> -->
+    <script src="./../static/vendor/js/bootstrap.min.js "></script>
+    <script src="./../static/vendor/js/fontawesome.min.js "></script>
+    <script src="./../static/js/main.js "></script>
+    <script>
+        $(document).ready(function() {
+            // func
+            $("#switch-pending").change(function() {
+                if (this.checked) {
+                    $(".order-item--pending").removeClass('hiddenOrderByControl');
+                } else {
+                    $(".order-item--pending").addClass('hiddenOrderByControl');
+                }
+            });
+            $("#switch-preparing").change(function() {
+                if (this.checked) {
+                    $(".order-item--preparing").removeClass('hiddenOrderByControl');
+                } else {
+                    $(".order-item--preparing").addClass('hiddenOrderByControl');
+                }
+            });
+            $("#inputCustomerName").on('input', function() {
+                var customerName = this.value.toLowerCase()
+                $(".order-item__info-name").each(function() {
+                    if ($(this).text().toLowerCase().includes(customerName)) {
+                        $(this).closest('.order-item').removeClass('hiddenOrderWhenFilterName');
+                    } else {
+                        $(this).closest('.order-item').addClass('hiddenOrderWhenFilterName');
+                    }
+                })
+            });
+            $("#inputTableNumber").on('input', function() {
+                var table = this.value
+                $(".order-item__info-table").each(function() {
+                    if ($(this).text() == table || !table) {
+                        $(this).closest('.order-item').removeClass('hiddenOrderWhenFilterTable');
+                    } else {
+                        $(this).closest('.order-item').addClass('hiddenOrderWhenFilterTable');
+                    }
+                })
+            });
+
+        });
+        $(document).delegate('.btn-confirm', 'click', function() {
+            let id = $(this).closest('.order-item').data('id')
+            console.log(`[Info]: Gửi thông báo xác nhận đơn hàng ${id}`)
+        })
+        $(document).delegate('.btn-cancel', 'click', function() {
+            let id = $(this).closest('.order-item').data('id')
+            console.log(`[Info]: Gửi thông báo hủy đơn hàng ${id}`)
+        })
+        $(document).delegate('.btn-done', 'click', function() {
+            let id = $(this).closest('.order-item').data('id')
+            console.log(`[Info]: Gửi thông báo hoàn thành đơn hàng ${id}`)
+        })
+    </script>
+</body>
+
+</html>
