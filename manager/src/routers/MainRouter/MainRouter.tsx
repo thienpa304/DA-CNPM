@@ -20,7 +20,7 @@ interface MainRouterProps {
 @observer
 class MainRouter extends Component<MainRouterProps> {
   render() {
-    const { isAuthenticated } = this.props.authStore!;
+    const  isAuthenticated =true;
 
     return (
       <Router>
