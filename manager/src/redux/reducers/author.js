@@ -23,8 +23,6 @@ export const authorSlice = createSlice({
     },
   },
 })
-
-// Action creators are generated for each case reducer function
 export const { adminOn, adminOff, customerOn, customerOff } = authorSlice.actions
 
 export default authorSlice.reducer

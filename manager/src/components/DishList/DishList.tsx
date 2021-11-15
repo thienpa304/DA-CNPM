@@ -7,6 +7,7 @@ import { IDish } from "../../models";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import DishListItem from "../DishListItem/DishListItem";
 
+
 interface IDishListProps {
   dishList: IDish[];
   onLoadMore?: any;
@@ -21,12 +22,12 @@ class DishList extends Component<IDishListProps> {
       <div className="DishList">
         <ErrorBoundary>
           <List>
-            {dishList.map((dish, index) => (
+          {dishList.map((dish, index) => (
               <DishListItem dish={dish} key={index} />
             ))}
 
             {canFetchMore ? (
-              <Button onClick={onLoadMore}>Load more</Button>
+              <Button  onClick={onLoadMore}>Load more</Button>
             ) : null}
           </List>
         </ErrorBoundary>
