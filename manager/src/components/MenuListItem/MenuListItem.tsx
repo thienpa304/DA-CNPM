@@ -55,8 +55,7 @@ class MenuListItem extends Component<IMenuListItemProps> {
 
 
           <Rating className= "DishListItem-details rating" name="half-rating-read" defaultValue={dish.rating} precision={0.5} readOnly />
-          <Paper >
-            
+          <Paper>
             <img className="DishListItem-details img" src={`${dish.img}`} alt="" />
           </Paper>
         <ButtonGroup size="small" aria-label="small outlined button group">

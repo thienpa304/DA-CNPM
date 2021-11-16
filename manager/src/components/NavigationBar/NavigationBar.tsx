@@ -10,6 +10,7 @@ import { currentPath } from "../../helpers";
 import Logout from "../Logout/Logout";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import NavigationLink from "../NavigationLink/NavigationLink";
+import NavigationMenuItem from "../NavigationMenuItem/NavigationMenuItem";
 
 interface NavigationBarProps {
   location?: any;
@@ -19,7 +20,6 @@ class NavigationBar extends Component<NavigationBarProps> {
   private get shouldRenderBackBtn(): boolean {
     return !!currentPath.isHomeSubroute();
   }
-
   render() {
     return (
       <div className="NavigationBar">
@@ -36,6 +36,18 @@ class NavigationBar extends Component<NavigationBarProps> {
               <Typography variant="h6" color="inherit">
                 Restaurant Manager
               </Typography>
+               {/* ////////////////////////////////////////////////// */}
+
+            <NavigationMenuItem
+              title="Kitchen orders"
+              path="/home/kitchen-orders"
+            />
+            <NavigationMenuItem
+              title="Menu Manager"
+              path="/home/menu-manager"
+            />
+
+              {/* ////////////////////////////////////////////////// */}
               <Logout />
             </Toolbar>
           </AppBar>
