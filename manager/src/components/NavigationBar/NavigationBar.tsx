@@ -19,6 +19,7 @@ class NavigationBar extends Component<NavigationBarProps> {
   private get shouldRenderBackBtn(): boolean {
     return !!currentPath.isHomeSubroute();
   }
+
   render() {
     return (
       <div className="NavigationBar">
@@ -28,7 +29,6 @@ class NavigationBar extends Component<NavigationBarProps> {
               {this.shouldRenderBackBtn ? (
                 <NavigationLink to="/">
                   <Button variant="contained">
-                    {/* <Icon>arrow_back_ios</Icon> */}
                     Home
                   </Button>
                 </NavigationLink>

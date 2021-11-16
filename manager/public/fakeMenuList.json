@@ -7,7 +7,7 @@
       "orderedAt": 1548287697134,
       "img":"https://howtocookmeat.com/wp-content/uploads/2018/05/steakfrites-768x512.jpg",
       "comment": "less pepper",
-      "rest": 1000,
+      "rest": 10,
       "rating": 2.5
     },
     {
@@ -18,7 +18,7 @@
       "orderedAt": 1548285987733,
       "img":"https://images.fidhouse.com/fidelitynews/wp-content/uploads/sites/6/2016/02/1455957944_73e976e48032f729beeef08b6dc19ea26a950ee5-1003880382.png",
       "comment": "less salt",
-      "rest": 2000,
+      "rest": 10,
       "rating": 3.5
     },
     {
@@ -29,7 +29,7 @@
       "orderedAt": 1548285585508,
       "img":"https://thuvienhuongdan.com/contents/upload/images/FrankieBlue2494/images/2018/2018-thang-4-tuan-10/Huong-dan-lam-Pizza-Margherita/banner.jpeg",
       "comment": "less pepper",
-      "rest": 3000,
+      "rest": 10,
       "rating": 4.75
     }
   ]
