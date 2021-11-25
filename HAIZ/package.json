@@ -1,0 +1,29 @@
+{
+  "name": "yellow-bee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd client && npm install && npm run build",
+    "start": "cd server && node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "google-auth-library": "^7.9.2",
+    "google-oauth-jwt": "^0.2.0",
+    "mysql": "^2.18.1",
+    "react-helmet": "^6.1.0"
+  },
+  "engines": {
+    "node": "16.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.26.0"
+  }
+}
