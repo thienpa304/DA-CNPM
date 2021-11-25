@@ -1,89 +1,35 @@
 [
     {
       "id": 1,
-      "name": "Gourmet Fruit Loaf",
+      "name": "Steak with Pommes Frittes",
       "table": "right-3",
       "quantity": 100,
       "orderedAt": 1548287697134,
-      "img":"https://bom.to/v2KZof",
+      "img":"https://howtocookmeat.com/wp-content/uploads/2018/05/steakfrites-768x512.jpg",
       "comment": "less pepper",
-      "rest": 10,
+      "rest": 1000,
       "rating": 2.5
     },
     {
       "id": 2,
-      "name": "Cream Cheese Garlic Bread",
+      "name": "Pizza con Prosciutto",
       "table": "window-1",
       "quantity": 2,
       "orderedAt": 1548285987733,
-      "img":"https://bom.to/sGFMGL",
+      "img":"https://images.fidhouse.com/fidelitynews/wp-content/uploads/sites/6/2016/02/1455957944_73e976e48032f729beeef08b6dc19ea26a950ee5-1003880382.png",
       "comment": "less salt",
-      "rest": 10,
+      "rest": 2000,
       "rating": 3.5
     },
     {
       "id": 3,
-      "name": "Onion Naan",
+      "name": "Pizza Margarita",
       "table": "right-2",
       "quantity": 3,
       "orderedAt": 1548285585508,
-      "img":"https://cookingismysport.files.wordpress.com/2016/05/onion-naan-1.jpg?w=1180&h=900",
+      "img":"https://thuvienhuongdan.com/contents/upload/images/FrankieBlue2494/images/2018/2018-thang-4-tuan-10/Huong-dan-lam-Pizza-Margherita/banner.jpeg",
       "comment": "less pepper",
-      "rest": 10,
-      "rating": 4.75
-    },
-    {
-      "id": 4,
-      "name": "Golden Lava Croissant",
-      "table": "right-2",
-      "quantity": 3,
-      "orderedAt": 1548285585508,
-      "img":"https://bom.to/Uyam9p",
-      "comment": "less pepper",
-      "rest": 10,
-      "rating": 4.75
-    },
-    {
-      "id": 5,
-      "name": "Glass of Fresh Cream",
-      "table": "right-2",
-      "quantity": 3,
-      "orderedAt": 1548285585508,
-      "img":"https://bom.to/JYS1az",
-      "comment": "less pepper",
-      "rest": 10,
-      "rating": 4.75
-    },
-    {
-      "id": 6,
-      "name": "Hot Latte",
-      "table": "right-2",
-      "quantity": 3,
-      "orderedAt": 1548285585508,
-      "img":"https://st2.depositphotos.com/5355656/7824/i/950/depositphotos_78249960-stock-photo-hot-cafe-latte-and-coffee.jpg",
-      "comment": "less pepper",
-      "rest": 10,
-      "rating": 4.75
-    },{
-      "id": 7,
-      "name": "Caramel Macchiato",
-      "table": "right-2",
-      "quantity": 3,
-      "orderedAt": 1548285585508,
-      "img":"https://vietblend.vn/wp-content/uploads/2018/12/caramel-macchiato_830x550.jpg",
-      "comment": "less pepper",
-      "rest": 10,
-      "rating": 4.75
-    },
-    {
-      "id": 8,
-      "name": "Coffee",
-      "table": "right-2",
-      "quantity": 3,
-      "orderedAt": 1548285585508,
-      "img":"https://thecoffeevn.com/wp-content/uploads/2019/06/cach-nhan-biet-ca-phe-nguyen-chat-vs-don-phu-gia.jpg",
-      "comment": "less pepper",
-      "rest": 10,
+      "rest": 3000,
       "rating": 4.75
     }
   ]

@@ -28,12 +28,16 @@ class MenuListItem extends Component<IMenuListItemProps> {
   };
 
   handleDecrement = () => {
-    this.setState(state => ({ counter: this.props.dish.rest > 0 ?--this.props.dish.rest : 0}));
+    this.setState(state => ({ counter: --this.props.dish.rest}));
   };
+  handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    // No longer need to cast to any - hooray for react!
+    this.setState({counter: e.target.value});
+  }
   render() {
    
     const { dish } = this.props;
-    const displayCounter = this.state.counter >= 0
+    const displayCounter = this.state.counter >0
     return (
       <ErrorBoundary>
         <ListItem
@@ -49,21 +53,22 @@ class MenuListItem extends Component<IMenuListItemProps> {
           <ListItemText
             className="DishListItem-details dish"
             primary={dish.name}
-            secondary={this.state.counter > 10 ? `Abudant: ${dish.rest}` : `Almost Over: ${dish.rest} `}
+            secondary={this.state.counter > 10 ? "Abudant" : "Almost Over"}
           />
 
 
 
           <Rating className= "DishListItem-details rating" name="half-rating-read" defaultValue={dish.rating} precision={0.5} readOnly />
-          <Paper>
+          <Paper >
+            
             <img className="DishListItem-details img" src={`${dish.img}`} alt="" />
           </Paper>
         <ButtonGroup size="small" aria-label="small outlined button group">
-        <Button className= "DishListItem-details btn" onClick={this.handleDecrement}>-</Button>
+        <Button className= "DishListItem-details btn" onClick={this.handleIncrement}>+</Button>
         {displayCounter && 
-         <Button style= {{width:50}} >{dish.rest}</Button>}
+         <Button style= {{width:50}} >{this.state.counter}</Button>}
          {displayCounter && 
-        <Button onClick={this.handleIncrement}>+</Button>}
+        <Button onClick={this.handleDecrement}>-</Button>}
       </ButtonGroup>          
         </ListItem>
       </ErrorBoundary>
