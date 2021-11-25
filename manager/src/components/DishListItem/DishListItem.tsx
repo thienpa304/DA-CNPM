@@ -3,12 +3,11 @@ import moment from "moment";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Checkbox from "@material-ui/core/Checkbox";
-import Paper from "@material-ui/core/Paper";
+
 import "./DishListItem.scss";
 import { IDish } from "../../models";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
-import Button from "@material-ui/core/Button";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
+
 interface IDishListItemProps {
   dish: IDish;
 }
@@ -57,7 +56,6 @@ class DishListItem extends Component<IDishListItemProps> {
             secondary={dish.comment || ""}
           />
 
-          
           <Checkbox
             checked={!!this.state.checked}
             tabIndex={-1}

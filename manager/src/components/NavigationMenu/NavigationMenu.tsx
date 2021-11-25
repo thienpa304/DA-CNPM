@@ -19,19 +19,20 @@ class NavigationMenu extends Component<INavigationMenuState> {
       <ErrorBoundary>
         {this.shouldRenderMenu ? (
           <div className="NavigationMenu">
-            <NavigationMenuItem
-              title="Kitchen orders"
-              path="/home/kitchen-orders"
-            />
-            <NavigationMenuItem
-              title="Menu Manager"
-              path="/home/menu-manager"
-            />
-          </div>
-        ) : null}
+          </div>) : null}
+          
+        
       </ErrorBoundary>
     );
   }
 }
 
 export default NavigationMenu;
+{/* <NavigationMenuItem
+              title="Kitchen orders"
+              path="/home/kitchen-orders"
+            />
+            <NavigationMenuItem
+              title="Menu Manager"
+              path="/home/menu-manager"
+            /> */}

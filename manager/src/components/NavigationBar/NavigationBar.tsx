@@ -10,6 +10,7 @@ import { currentPath } from "../../helpers";
 import Logout from "../Logout/Logout";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import NavigationLink from "../NavigationLink/NavigationLink";
+import NavigationMenuItem from "../NavigationMenuItem/NavigationMenuItem";
 
 interface NavigationBarProps {
   location?: any;
@@ -28,7 +29,6 @@ class NavigationBar extends Component<NavigationBarProps> {
               {this.shouldRenderBackBtn ? (
                 <NavigationLink to="/">
                   <Button variant="contained">
-                    {/* <Icon>arrow_back_ios</Icon> */}
                     Home
                   </Button>
                 </NavigationLink>
@@ -36,6 +36,18 @@ class NavigationBar extends Component<NavigationBarProps> {
               <Typography variant="h6" color="inherit">
                 Restaurant Manager
               </Typography>
+               {/* ////////////////////////////////////////////////// */}
+
+            <NavigationMenuItem
+              title="Kitchen orders"
+              path="/home/kitchen-orders"
+            />
+            <NavigationMenuItem
+              title="Menu Manager"
+              path="/home/menu-manager"
+            />
+
+              {/* ////////////////////////////////////////////////// */}
               <Logout />
             </Toolbar>
           </AppBar>

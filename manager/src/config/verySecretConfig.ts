@@ -1,5 +1,5 @@
 export const verySecretConfig = {
-    USERNAME: "",
-    PASSWORD: ""
+    USERNAME: "admin",
+    PASSWORD: "123"
   };
   
