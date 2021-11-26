@@ -19,6 +19,10 @@ class NavigationMenu extends Component<INavigationMenuState> {
       <ErrorBoundary>
         {this.shouldRenderMenu ? (
           <div className="NavigationMenu">
+            <div className="Slogan">
+              <h1 style={{color: "white",margin:"center"}}>BK COFFEE MANAGER </h1>
+              <h3 style={{color: "white"}}>Khơi nguồn cảm hứng</h3>
+            </div>
           </div>) : null}
           
         

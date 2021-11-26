@@ -36,7 +36,7 @@ class MenuListItem extends Component<IMenuListItemProps> {
     const displayCounter = this.state.counter >= 0
     return (
       <ErrorBoundary>
-        <ListItem
+        <ListItem style={{ background: '#FFFAF7'}}
           className="DishListItem"
           key={dish.id}
           button

@@ -5,18 +5,7 @@ import "./NavigationMenuItem.scss";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import NavigationLink from "../NavigationLink/NavigationLink";
 import { createTheme } from '@mui/material/styles';
-import { purple } from '@mui/material/colors';
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: purple[500],
-    },
-    secondary: {
-      main: '#f44336',
-    },
-  },
-});
-
+import {theme} from '../Logout'
 interface INavigationMenuItemProps {
   title: string;
   path: string;
@@ -40,11 +29,14 @@ class NavigationMenuItem extends Component<INavigationMenuItemProps> {
             </Button>
           ) : (
             <NavigationLink to={path}>
-               <ThemeProvider theme={theme}>
-              <Button className="NavigationMenuItem-Button"  variant="contained" color="info" >
+             <ThemeProvider theme = {theme}>
+             <Button  className="NavigationMenuItem-Button"  
+                      variant="contained" 
+                      color="secondary"
+                       >
                 {title}
               </Button>
-           </ThemeProvider>
+              </ThemeProvider>
             </NavigationLink>
           )}
         </ErrorBoundary>

@@ -10,30 +10,13 @@ import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-const theme = createTheme({
+export const theme = createTheme({
   palette: {
-    primary: {
-      main: '#64748B',
-      contrastText: '#fff',
+    secondary: {
+      main: '#735F53'
     },
   },
 });
-declare module '@mui/material/styles' {
-  interface Palette {
-    neutral: Palette['primary'];
-  }
-
-  // allow configuration using `createTheme`
-  interface PaletteOptions {
-    neutral?: PaletteOptions['primary'];
-  }
-}
-declare module '@mui/material/Button' {
-  interface ButtonPropsColorOverrides {
-    neutral: true;
-  }
-}
-
 interface ILogoutProps {
   authStore?: IAuthStore;
   notificationStore?: INotificationStore;
@@ -51,7 +34,7 @@ class Logout extends Component<ILogoutProps> {
           <Button
             onClick={this.logoutHandler}
             variant="contained"
-            color="primary"
+            color="secondary"
           >
             Log out
           </Button>

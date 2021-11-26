@@ -4,7 +4,15 @@
     flex-wrap: wrap;
     justify-content: space-around;
     height: calc(100vh - 64px);
-    background:  url("../../assets/jason-leung-537357-unsplash.png") no-repeat
+    background:  url("../../assets/background.jpg") no-repeat
     center center fixed;
   }
+.Slogan{
+  position:absolute;
+  background-color: #574941;
+  text-align: center;
+  min-width: 50%;
+  border-radius: 10px;
+  top:20%
+}
   

@@ -36,7 +36,7 @@ class DishListItem extends Component<IDishListItemProps> {
 
     return (
       <ErrorBoundary>
-        <ListItem
+        <ListItem style={{ background: '#FFFAF7'}}
           className="DishListItem"
           key={dish.id}
           button

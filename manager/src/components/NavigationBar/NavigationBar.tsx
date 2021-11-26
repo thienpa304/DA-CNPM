@@ -11,11 +11,11 @@ import Logout from "../Logout/Logout";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import NavigationLink from "../NavigationLink/NavigationLink";
 import NavigationMenuItem from "../NavigationMenuItem/NavigationMenuItem";
-
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {theme} from '../Logout'
 interface NavigationBarProps {
   location?: any;
 }
-
 class NavigationBar extends Component<NavigationBarProps> {
   private get shouldRenderBackBtn(): boolean {
     return !!currentPath.isHomeSubroute();
@@ -24,13 +24,15 @@ class NavigationBar extends Component<NavigationBarProps> {
     return (
       <div className="NavigationBar">
         <ErrorBoundary>
-          <AppBar position="static">
+        <AppBar position="static" style={{ background: '#aa8b76  ' }}>
             <Toolbar className="NavigationBar-Toolbar">
               {this.shouldRenderBackBtn ? (
                 <NavigationLink to="/">
-                  <Button variant="contained">
+                  <ThemeProvider theme = {theme}>
+                  <Button variant="contained" color = "secondary">
                     Home
                   </Button>
+                  </ThemeProvider>
                 </NavigationLink>
               ) : null}
               <Typography variant="h6" color="inherit">

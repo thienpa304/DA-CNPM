@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { inject, observer } from "mobx-react";
-
 import { INotificationStore } from "../../stores/notificationStore";
 import { IDish, IPagination } from "../../models";
 import { messages, paginationConfig, endpoints } from "../../config";
