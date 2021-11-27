@@ -10,9 +10,8 @@ import DropPayment from '../PaymentController/dropdown';
 
 const Cart = (props) => {
   const cartContext = useContext(CartContext);
-
   const totalAmount = `${cartContext.totalAmount.toLocaleString('vi-VN')} VND`;
-
+  sessionStorage.setItem("money", totalAmount);
   const cartItems = (
     <ul className = {classes['cart-items']}>
       {cartContext.items.map((item) => (
@@ -26,7 +25,7 @@ const Cart = (props) => {
     </ul>
   );
 
-
+        // console.log("Cart amount: ", cartContext.totalAmount);
   return (
       <Card>
         {cartItems}
@@ -40,7 +39,7 @@ const Cart = (props) => {
         </div>
         <Row >
           <Col style={{textAlign: "center"}}>
-          <DropPayment /> 
+          <DropPayment  /> 
             </Col>
             <Col style={{textAlign: "center"}}>
             <DropMenu />
