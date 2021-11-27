@@ -1,0 +1,28 @@
+.form {
+  text-align: right;
+  /* color: transparent; */
+  /* background-image: linear-gradient(to right, #ffa400, #00aefd);
+  -webkit-background-clip: text; */
+}
+
+.form button {
+  font: inherit;
+  cursor: pointer;
+  background-color: #aa8b76;
+  border: 1px solid #aa8b76;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  width: auto;
+  padding: 0.25rem 1rem !important;
+  margin-top: 2px !important;
+  text-transform: none !important;  
+  /* position: sticky;
+  bottom: 0; */
+}
+
+.form button:hover,
+.form button:active {
+  background-color: #574941;
+  border-color: #574941;
+}
