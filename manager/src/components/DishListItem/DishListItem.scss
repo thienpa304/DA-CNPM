@@ -3,7 +3,6 @@
       &.quantity {
         flex: 1;
       }
-  
       &.target {
         flex: 2;
       }
@@ -11,13 +10,8 @@
       &.dish {
         flex: 3;
       }
-      &.img{
-        width: 100px;
-      height: 70px;
-        flex: 4;
-      }
       &.btn{
-        flex: 5;
+        flex: 4;
         position: relative;
         margin-left: 100px;
       }

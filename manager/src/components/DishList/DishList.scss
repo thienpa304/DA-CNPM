@@ -2,7 +2,28 @@
     height: calc(100vh - 64px);
     overflow: auto;
     text-align: center;
-  
+    background-color: #FFFAF7;
+  }
+  .Quantity{
+    flex:1;
+    position: absolute;
+    margin-left: 0;
   }
 
-  
+  .Position {
+    flex:2;
+    position: absolute;
+    margin-left: 15%;
+    
+  }
+
+  .Dishes{
+    flex:3;
+    position: absolute;
+    margin-left: 47%;
+  }
+  .Served{
+    flex: 4;
+    margin-left: 93%;
+    position: absolute;
+  }

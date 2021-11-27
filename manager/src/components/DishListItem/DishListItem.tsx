@@ -7,7 +7,8 @@ import Checkbox from "@material-ui/core/Checkbox";
 import "./DishListItem.scss";
 import { IDish } from "../../models";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
-
+import{theme} from "../Logout"
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 interface IDishListItemProps {
   dish: IDish;
 }
@@ -56,11 +57,14 @@ class DishListItem extends Component<IDishListItemProps> {
             secondary={dish.comment || ""}
           />
 
+          <ThemeProvider theme={theme}>
           <Checkbox
             checked={!!this.state.checked}
             tabIndex={-1}
             disableRipple
+            color = "secondary"
           />
+          </ThemeProvider>
         </ListItem>
       </ErrorBoundary>
     );
