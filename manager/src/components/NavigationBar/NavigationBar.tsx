@@ -36,7 +36,7 @@ class NavigationBar extends Component<NavigationBarProps> {
                 </NavigationLink>
               ) : null}
               <Typography variant="h6" color="inherit">
-                Restaurant Manager
+                Ahuhu Coffee Manager
               </Typography>
                {/* ////////////////////////////////////////////////// */}
 
