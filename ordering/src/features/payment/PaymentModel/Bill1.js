@@ -29,13 +29,13 @@ const Cart1 = (props) => {
 
   return (
       <Card>
-          <span style={{ fontWeight: 'bold', fontSize: '2.1vw'}}> ID:{id}</span>
+          <span style={{ fontWeight: 'bold', fontSize: '2.5vw'}}> ID:{id}</span>
         {cartItems}
         <div style={{paddingTop: "40px"}}>
-        <div style={{ fontWeight: 'bold', fontSize: '2.1vw', textAlign: "left", float: "left"}}> 
+        <div style={{ fontWeight: 'bold', fontSize: '3vw', textAlign: "left", float: "left"}}> 
          Thành tiền
           </div>
-          <div style={{ fontWeight: 'bold', fontSize: '2.1vw', textAlign: "right"}}>
+          <div style={{ fontWeight: 'bold', fontSize: '3vw', textAlign: "right"}}>
           {totalAmount}
         </div>
         </div>
