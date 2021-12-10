@@ -22,7 +22,7 @@ export default class DropMenu extends React.Component {
     return (
         <Dropdown  isOpen={this.state.btnDropright}  toggle={() => { this.setState({ btnDropright: !this.state.btnDropright }); }}>
         <DropdownToggle caret>
-        <a href='/ordering'><span style={{color: 'black', fontWeight: 'bold',fontSize: '1.3vw'}}> Quay lại Menu</span> </a>
+        <a href='/ordering'><span style={{color: 'black', fontWeight: 'bold',fontSize: '2.5vw'}}> Quay lại Menu</span> </a>
         </DropdownToggle>
       </Dropdown>
     );

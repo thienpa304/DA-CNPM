@@ -5,17 +5,17 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background: url("../../assets/photo-1559925393-8be0ec4767c8.jfif") no-repeat
+    background: url("../../assets/background.jpg") no-repeat
       center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  
+    ;
     &-group {
       text-align: center;
       display: flex;
-      background-color: #fff;
+      background-color: #FFFAF7;
       border-radius: 0.3rem;
       padding: 1rem;
       flex-direction: column;

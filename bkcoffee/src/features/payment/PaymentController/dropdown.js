@@ -19,12 +19,12 @@ export default class DropPayment extends React.Component {
       dropdownOpen: !prevState.dropdownOpen
     }));
   }
-
+  
   render() {
     return (
         <Dropdown  isOpen={this.state.btnDropright}  toggle={() => { this.setState({ btnDropright: !this.state.btnDropright }); }}>
         <DropdownToggle  caret>
-        <span style={{color: 'black', fontWeight: 'bold',fontSize: '1.3vw'}}>Thanh toán</span>
+        <span style={{color: 'black', fontWeight: 'bold',fontSize: '2.5vw'}}>Thanh toán</span>
         </DropdownToggle>
         <DropdownMenu>
           <DropdownItem><a className="hihi" href="/paymentmomo">Ví điện tử Momo(Momo wallet)</a><img className="imag" border-radius="50px" width="30px" height="30px" src='./assets/images/momo.jpg' alt=""></img></DropdownItem>

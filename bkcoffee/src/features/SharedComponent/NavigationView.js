@@ -6,21 +6,29 @@ const AdsBanner = () => {
     return (
         <Navbar className="navbar-header" color="light"  expand="md"  light container>
             <NavbarBrand href="/home">
-                <img width="120px" height="70px" src='assets/images/logo.png' alt="Logo"></img>
+                <img width="120px" height="75px" src='assets/images/logo.png' alt="Logo"></img>
             </NavbarBrand>
             <NavbarToggler />
                 <Collapse navbar>
                     <Nav className="nav-header flex-container" style={{width: "100%"}} navbar>
 
                         <NavItem className="flex-item" style={{flexGrow: "30"}}>
+                            <NavLink href="/">
+                                <FaBookOpen /> QUẢN LÝ
+                            </NavLink>
+
                         </NavItem>
 
-                        <NavItem className="flex-item" style={{flexGrow: "30"}}>                        
+                        <NavItem className="flex-item" style={{flexGrow: "30"}}> 
+                            <NavLink href="/ordering">
+                                <FaBookOpen /> XEM MENU
+                            </NavLink>
+                  
                         </NavItem>
 
                         <NavItem className="flex-item" style={{flexGrow: "5"}}>
-                            <NavLink href="/ordering">
-                                <FaBookOpen /> XEM MENU
+                            <NavLink href="/">
+                                <FaBookOpen /> ĐĂNG NHẬP / ĐĂNG KÝ
                             </NavLink>
                         </NavItem>
                     </Nav>

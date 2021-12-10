@@ -8,7 +8,8 @@ import { IAuthStore } from "../../stores/authStore";
 import { INotificationStore } from "../../stores/notificationStore";
 import { verySecretConfig, messages } from "../../config";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
-
+import{theme} from "../Logout"
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 interface ILoginProps {
   authStore?: IAuthStore;
   notificationStore?: INotificationStore;
@@ -35,28 +36,31 @@ class Login extends Component<ILoginProps, ILoginState> {
           <div className="Login-group">
             <span>Please login with your username and password</span>
 
-            <form className="Login-form" noValidate autoComplete="off">
-              <Input
+            <form className="Login-form" noValidate autoComplete="off" >
+              <Input  
                 type="username"
                 name="username"
-                placeholder="username..."
+                placeholder="UserName"
                 onChange={e => this.setUsername(e)}
                 value={this.state.username}
               />
               <Input
                 type="password"
                 name="password"
-                placeholder="password..."
+                placeholder="Password"
                 onChange={e => this.setPassword(e)}
                 value={this.state.password}
               />
-              <Button
+              <ThemeProvider theme = {theme}>
+                <Button
                 variant="contained"
-                color="primary"
+                color="secondary"
                 onClick={this.loginHandler}
               >
-                Log in
+                  Log in
               </Button>
+              </ThemeProvider>
+              
             </form>
           </div>
         </ErrorBoundary>

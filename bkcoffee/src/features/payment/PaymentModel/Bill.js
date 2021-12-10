@@ -4,15 +4,14 @@ import BillDetail from './BillDetail';
 import CartContext from '../../food_ordering/components/Cart/CartController/CartContext';
 import classes from './Bill.module.css';
 import React  from 'react';
-import random from './Id'
-//import { LoginContext } from '../../SharedComponent/LoginContext';
+import {  Col, Row} from 'reactstrap';
+import DropMenu from '../PaymentController/dropdown2';
+import DropPayment from '../PaymentController/dropdown';
 
-
-const Cart1 = (props) => {
+const Cart = (props) => {
   const cartContext = useContext(CartContext);
-
   const totalAmount = `${cartContext.totalAmount.toLocaleString('vi-VN')} VND`;
-
+  sessionStorage.setItem("money", totalAmount);
   const cartItems = (
     <ul className = {classes['cart-items']}>
       {cartContext.items.map((item) => (
@@ -25,23 +24,30 @@ const Cart1 = (props) => {
       ))}
     </ul>
   );
-  let id = random();
 
+        // console.log("Cart amount: ", cartContext.totalAmount);
   return (
       <Card>
-          <span style={{ fontWeight: 'bold', fontSize: '2.1vw'}}> ID:{id}</span>
         {cartItems}
         <div style={{paddingTop: "40px"}}>
-        <div style={{ fontWeight: 'bold', fontSize: '2.1vw', textAlign: "left", float: "left"}}> 
-         Thành tiền
+        <div style={{ fontWeight: 'bold', fontSize: '3vw', textAlign: "left", float: "left"}}> 
+           Thành tiền
           </div>
-          <div style={{ fontWeight: 'bold', fontSize: '2.1vw', textAlign: "right"}}>
+          <div style={{ fontWeight: 'bold', fontSize: '3vw', textAlign: "right"}}>
           {totalAmount}
         </div>
         </div>
+        <Row >
+          <Col style={{textAlign: "center"}}>
+          <DropPayment  /> 
+            </Col>
+            <Col style={{textAlign: "center"}}>
+            <DropMenu />
+            </Col>
+          </Row>
       </Card>
   );
 
 };
 
-export default Cart1;
+export default Cart;
