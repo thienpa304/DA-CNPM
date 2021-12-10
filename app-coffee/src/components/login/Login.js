@@ -14,10 +14,14 @@ function Login() {
 
   const handleClick = (e) => {
     e.preventDefault();
-
-    if (input.name !== "Thien" || input.pass !== "password")
+      if (input.name  == "admin" && input.pass  == "pass")
+    {
+      window.location.href="http://localhost:3002/home"
+    }
+     else  if (!input||(input.name !== "Thien" || input.pass !== "password"))
       setValid("Tài khoản hoặc mật khẩu không đúng!");
-    else history.push("/");
+      
+    else  window.location.href="http://localhost:3001/ordering"
   };
   return (
     <>
@@ -87,10 +91,10 @@ function Login() {
                 <span>Đăng nhập khác:</span>
               </div>
               <div className="flex-c-m">
-                <a href="/" className="login100-social-item bg1">
+                <a href="https://www.google.com/" className="login100-social-item bg1">
                   <i className="fa fa-facebook" />
                 </a>
-                <a href="/" className="login100-social-item bg2">
+                <a href="http://localhost:3001/ordering" className="login100-social-item bg2">
                   <i className="fa fa-twitter" />
                 </a>
                 <a href="/" className="login100-social-item bg3">

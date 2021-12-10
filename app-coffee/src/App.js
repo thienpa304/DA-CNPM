@@ -11,11 +11,10 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/">
-          <Menu />
-        </Route>
+       
+       
         <Route path="/admin">{admin ? <Admin /> : <Redirect to="/" />}</Route>
-        <Route   path="/login">
+        <Route   path="/"  exact="true">
           <Login />
         </Route>
         <Route   path="/register">
