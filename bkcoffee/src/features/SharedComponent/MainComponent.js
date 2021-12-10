@@ -10,7 +10,8 @@ import FoodMenu from '../food_ordering/FoodMenuController';
 import DrinkMenu from '../food_ordering/DrinkMenuController';
 import SearchPage from '../food_ordering/components/SeacrhPage/SearchPageController';
 import Footer from './FooterComponent'
-
+import Login from '../login/Login'
+import Register from '../login/Register'
 class Main extends Component {
 	render(){
         return (
@@ -19,6 +20,8 @@ class Main extends Component {
                     <Switch>
                         <Route path='/home' component={Home} />   
                         <Route path='/ordering' component={Ordering} />
+                        <Route path='/login' component={Login} />
+                        <Route path='/register' component={Register} />
                         <Route path='/food-menu' component={FoodMenu} />
                         <Route path='/drink-menu' component={DrinkMenu} />
                         <Route path='/search-item' component={SearchPage} />

@@ -16,12 +16,12 @@ function Login() {
     e.preventDefault();
       if (input.name  == "admin" && input.pass  == "pass")
     {
-      window.location.href="http://localhost:3002/home"
+      window.location.href="http://localhost:3000/"
     }
      else  if (!input||(input.name !== "Thien" || input.pass !== "password"))
       setValid("Tài khoản hoặc mật khẩu không đúng!");
       
-    else  window.location.href="http://localhost:3001/ordering"
+    else  window.location.href="http://localhost:3000/"
   };
   return (
     <>
@@ -64,7 +64,7 @@ function Login() {
                   placeholder="Mật khẩu của bạn"
                   onChange={handleChance}
                 />
-                <span className="focus-input100" data-symbol="" />
+                <span className="focus-input100" data-symbol="" />
               </div>
               <div className="text-right p-t-8 p-b-31">
                 <a href="/">Quên mật khẩu ?</a>
@@ -91,14 +91,14 @@ function Login() {
                 <span>Đăng nhập khác:</span>
               </div>
               <div className="flex-c-m">
-                <a href="https://www.google.com/" className="login100-social-item bg1">
-                  <i className="fa fa-facebook" />
+                <a href="/" className="login100-social-item bg1">
+                <i class="fab fa-facebook"></i>
                 </a>
-                <a href="http://localhost:3001/ordering" className="login100-social-item bg2">
-                  <i className="fa fa-twitter" />
+                <a href="/" className="login100-social-item bg2">
+                <i class="fab fa-twitter"></i>
                 </a>
                 <a href="/" className="login100-social-item bg3">
-                  <i className="fa fa-google" />
+                <i class="fab fa-google-plus-g"></i>
                 </a>
               </div>
               <div className="flex-col-c p-t-155">

@@ -27,7 +27,7 @@ const AdsBanner = () => {
                         </NavItem>
 
                         <NavItem className="flex-item" style={{flexGrow: "5"}}>
-                            <NavLink href="/">
+                            <NavLink href="/login">
                                 <FaBookOpen /> ĐĂNG NHẬP / ĐĂNG KÝ
                             </NavLink>
                         </NavItem>

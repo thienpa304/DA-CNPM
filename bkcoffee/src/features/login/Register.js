@@ -68,7 +68,7 @@ function Register() {
                   placeholder="Email hoặc số điện thoại "
                   onChange={handleChance}
                 />
-                <span className="focus-input100" data-symbol="" />
+                <span className="focus-input100" data-symbol=" " />
               </div>
               <div
                 className="wrap-input100 validate-input"
@@ -83,7 +83,7 @@ function Register() {
                   onChange={handleChance}
                 />
 
-                <span className="focus-input100" data-symbol="" />
+                <span className="focus-input100" data-symbol=" " />
               </div>
               <div
                 className="wrap-input100 validate-input mt-4"
@@ -98,7 +98,7 @@ function Register() {
                   onChange={handleChance}
                 />
 
-                <span className="focus-input100" data-symbol="" />
+                <span className="focus-input100" data-symbol=" " />
               </div>
               <div className="text-right p-t-8 p-b-31">
                 <a href="/">Quên mật khẩu ?</a>
@@ -126,13 +126,13 @@ function Register() {
               </div>
               <div className="flex-c-m">
                 <a href="/" className="login100-social-item bg1">
-                  <i className="fa fa-facebook" />
+                <i class="fab fa-facebook"></i>
                 </a>
                 <a href="/" className="login100-social-item bg2">
-                  <i className="fa fa-twitter" />
+                <i class="fab fa-twitter"></i>
                 </a>
                 <a href="/" className="login100-social-item bg3">
-                  <i className="fa fa-google" />
+                <i class="fab fa-google-plus-g"></i>
                 </a>
               </div>
               <div className="flex-col-c p-t-155">
